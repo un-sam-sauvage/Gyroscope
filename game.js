@@ -20,8 +20,8 @@ gyroscope.addEventListener('reading', e => {
 });
 gyroscope.start();
 var result = document.querySelector('.result')
-result.innerHTML = "x" + gyroscope.x +" ";
-result.innerHTML += "y" + gyroscope.y +" "; 
+result.innerHTML = "x" + gyroscope.x + " ";
+result.innerHTML += "y" + gyroscope.y + " ";
 
 var circleToMove = []
 let x = 0
