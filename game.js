@@ -47,9 +47,11 @@ function gameLoop() {
     ctx.fillRect(0, 0, canvas.width, canvas.height)
 
     circleToMove.forEach(element => {
+        element.x = gyroValue.z
+        element.y = gyroValue.y
         ctx.beginPath();
         ctx.fillStyle = element.color
-        ctx.arc(element.x + gyroValue.x, element.y + gyroValue.y, element.radius, element.offset, 2 * Math.PI);
+        ctx.arc(element.x, element.y, element.radius, element.offset, 2 * Math.PI);
         ctx.fill()
         ctx.stroke();
     });
