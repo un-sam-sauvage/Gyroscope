@@ -36,10 +36,11 @@ function gameLoop() {
     circleToMove.forEach(element => {
         ctx.beginPath();
         ctx.fillStyle = element.color
-        ctx.arc(element.x, element.y, element.radius, element.offset, 2 * Math.PI);
+        ctx.arc(element.x + gyroscope.x , element.y + gyroscope.y, element.radius, element.offset, 2 * Math.PI);
         ctx.fill()
         ctx.stroke();
     });
+
 
 }
 setInterval(gameLoop, 1000 / 60)
