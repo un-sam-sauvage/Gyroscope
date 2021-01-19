@@ -30,7 +30,6 @@ canvas.width = document.documentElement.clientWidth || document.body.clientWidth
 canvas.height = document.documentElement.clientHeight || document.body.clientHeight;
 
 
-
 function createCircle(x, y, radius, offset, color) {
     let obj = {
         x: x,
@@ -50,7 +49,7 @@ function gameLoop() {
     circleToMove.forEach(element => {
         ctx.beginPath();
         ctx.fillStyle = element.color
-        ctx.arc(element.x + gyroscope.x, element.y + gyroscope.y, element.radius, element.offset, 2 * Math.PI);
+        ctx.arc(element.x + gyroValue.x, element.gyroValue.y + gyroscope.y, element.radius, element.offset, 2 * Math.PI);
         ctx.fill()
         ctx.stroke();
     });
