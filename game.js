@@ -17,6 +17,9 @@ let y = 0
 canvas.width = document.documentElement.clientWidth || document.body.clientWidth;
 canvas.height = document.documentElement.clientHeight || document.body.clientHeight;
 
+const content = element.innerHTML
+element.innerHTML = gyroscope.x + " " + gyroscope.y
+
 function createCircle(x,y,radius,offset,color){
     let obj= {
         x:x,
